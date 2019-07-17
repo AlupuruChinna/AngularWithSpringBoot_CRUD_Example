@@ -1,0 +1,17 @@
+<div align="center">
+  <h1>Login</h1>
+
+  <div *ngIf='invalidLogin' class="alert alert-warning"> {{errMsg}}</div>
+  <h5>
+    <div>
+      Username:<input type="textbox" [(ngModel)]="username" name="username"><br><br>
+      Password :<input type="password" [(ngModel)]="password" name='password'><br><br>
+      <button (click)=checkValid() class="btn btn-success"> submit </button>
+
+      <br><br>
+
+    </div>
+
+
+  </h5>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+<h1> My Todos </h1>
+<div *ngIf='alertMessage' class="alert alert-warning"> {{alertMessage}}</div>
+<table border="0" class="table">
+  <th>User Id</th>
+  <!-- <th>User name</th> -->
+  <th>Want to Learn</th>
+  <th>Date</th>
+  <th>Update</th>
+  <th>Delete</th>
+
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td> {{todo.id}} </td>
+      <!-- <td> {{todo.name}} </td> -->
+      <td> {{todo.location}} </td>
+      <td> {{todo.date | date | uppercase }} </td>
+      <td> <button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button>
+    <td> <button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button>
+    </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<button (click)="addNewTodo()" class="btn btn-primary">Add New</button>
+</div>

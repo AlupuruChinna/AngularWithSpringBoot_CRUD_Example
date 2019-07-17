@@ -1,0 +1,20 @@
+
+<h2>Welcome Page goes here </h2>
+
+  <h1>{{ name }}</h1>
+
+  <!--your todos here : <a [routerLink]="['/todos']" routerLinkActive="router-link-active" > Click Here</a>-->
+  <br>
+  Manage your todos : <a routerLink='/todos'>Click Here</a>
+<br>
+<p>Click here for getting data from Backend Application</p>
+  <button class="btn btn-success" (click)="getWelcomeMessage()">Click Here </button>
+
+  <div class="container" *ngIf="dataFromSerer">
+    <h2> Your Customized Message  is </h2>
+    <h3> {{ dataFromSerer }} </h3>
+
+
+  </div>
+
+
